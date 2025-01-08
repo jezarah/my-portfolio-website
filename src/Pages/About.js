@@ -1,25 +1,33 @@
 import React from 'react';
-import Laptop from '../Assets/Images/Laptop.png';
-const About  = () => {
+import EmblaCarousel from "../CarouselComponents/EmblaCarousel";
+const About  = ({skills}) => {
+    const EMBLA_OPTIONS = { loop: true }
+
     return (
-        <div className="page">
-            <div className="page-section">
-                <div>
-                    <div className="page-section-header" style={{paddingRight: 12}}>
-                        Hi 👋, nice to meet you. My name is Jezzie, I'm an aspiring <text className="page-section-header-standout">Software Developer</text> and a graduating Computer Science student from
-                        Vancouver, BC!
+        <>
+            <div className="home-page">
+                <div className="page-hero-section">
+                    <div>
+                        <div className="page-hero-header">
+                            Hello 👋, I'm <span className="page-section-header-standout">Jezzie</span>. <br/>
+                            I'm a Software Developer based in
+                            Vancouver, BC!
+                        </div>
+                        <div className="page-body">
+                            Dedicated to creating functional, responsive, and aesthetic full stack web and mobile applications.
+                            My aptitude for analytical problem solving is what pushed me to pursue my first degree in Engineering,
+                            but I found my passion for coding and software development due to the unique combination of creativity,
+                            logic, and the inherently dynamic innovation of the technology field. I'm a lifelong learner and committed
+                            to seeking opportunities for growth and personal development.
+                        </div>
                     </div>
-                    <div className="page-body">
-                        I created this website as a fun project to showcase various work I've done throughout my studies.
-                        I've included some of my favourite coursework, freelance, hackathon, and co-op projects. Please
-                        feel free to take a look 👀. If you have any, I'd love to hear your thoughts or feedback!
-                    </div>
-                </div>
-                <div className="computer-img-wrapper">
-                    <img className="computer-img" src={Laptop} alt="Laptop"/>
                 </div>
             </div>
-        </div>
+            <div className="home-page-no-x-padding">
+                <div className="skills-header">SOME OF MY SKILLS</div>
+                {skills && <EmblaCarousel slides={skills} options={EMBLA_OPTIONS}/>}
+            </div>
+        </>
     );
 };
 

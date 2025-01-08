@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import LinkedIn from '../Assets/Images/linkedin.png';
+import GitHub from '../Assets/Images/github.png';
 import Popup from "reactjs-popup";
 import styled from 'styled-components';
 import Maple from "../Assets/Images/maple.jpeg";
@@ -21,9 +22,12 @@ const Footer = () => {
     return(
         <div className="footer">
             <h1 style={{margin: 6}}>
-                © 2024 jezziecodes.com.
+                © 2025 jezziecodes.com
             </h1>
-            <div style={{marginLeft: "auto", display: "grid", gridTemplateColumns: "repeat(2,1fr)"}}>
+            <div style={{marginLeft: "auto", display: "grid", gridTemplateColumns: "repeat(3,1fr)"}}>
+                <a href="https://github.com/jezarah" target="_blank" rel="noreferrer">
+                    <img src={GitHub} alt="GitHub" height={30} width={30} style={{margin: 3}}/>
+                </a>
                 <a href="https://www.linkedin.com/in/jezarah-ebel/" target="_blank" rel="noreferrer">
                     <img src={LinkedIn} alt="LinkedIn" height={30} width={30} style={{margin: 3}}/>
                 </a>
@@ -42,7 +46,7 @@ const Footer = () => {
                                 </svg>
                             </button>
                         </div>
-                        <div style={{fontFamily: "Bogart", textAlign: "center"}}>
+                        <div className="modal-text">
                             Hi! I'm Maple, Jezzie's assistant!
                         </div>
                         <div>

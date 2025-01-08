@@ -4,7 +4,9 @@ import './navbar.css';
 const DesktopNavigation = () =>{
     return(
         <nav className="desktop-vis desktop-navbar">
-            <NavLinks />
+            <div className="content">
+                <NavLinks />
+            </div>
         </nav>
     );
 }

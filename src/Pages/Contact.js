@@ -69,10 +69,13 @@ const Contact  = () => {
 
     return (
         <div className="page">
-            <div className="page-section form-wrapper" style={{gridTemplateColumns: "repeat(1, 1fr)"}}>
+            <div className="form-wrapper" style={{gridTemplateColumns: "repeat(1, 1fr)"}}>
                 <form onSubmitCapture={handleSubmit(onSubmit)}>
-                    <div className="page-section-header">
+                    <div className="page-section-header contact-header">
                         Get In Touch
+                    </div>
+                    <div className="page-body">
+                        Have a question or want to work together? Send me a message and I'll get back to you as soon as possible.
                     </div>
                     <div style={{marginTop: "1rem"}}>
                         <label>Name

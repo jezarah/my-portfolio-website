@@ -14,13 +14,21 @@ const MobileNavigation = () =>{
 
 
     return(
-        <nav className="mobile-vis mobile-navbar">
-            <Link to="/" className="navbar-logo" onClick={closeMenu}>
-                jezarah ebel.
-            </Link>
-            { click ? Close : Hamburger}
-            {click && <NavLinks isClicked={true} closeMenu={closeMenu}/>}
-        </nav>
+        <div>
+            <nav className="mobile-vis mobile-navbar">
+                <div className="navbar-logo-svg">
+                    <svg viewBox="0 0 240 40">
+                        <Link to="/">
+                            <text x='0' y='30' className="navbar-logo-text">
+                                &#60;jezarah ebel/&#62;
+                            </text>
+                        </Link>
+                    </svg>
+                </div>
+                { click ? Close : Hamburger}
+                {click && <NavLinks isClicked={true} closeMenu={closeMenu}/>}
+            </nav>
+        </div>
     );
 }
 

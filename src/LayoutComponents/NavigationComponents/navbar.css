@@ -9,27 +9,34 @@ nav {
 /*desktop nav bar css*/
 .desktop-navbar {
     position: fixed;
+    z-index: 3;
     width: 100%;
-    padding: 0 75px;
+    padding: 0 6vw;
     border: 1px solid var(--headline);
+    display: grid;
 }
 
 .navbar-logo {
+    display: flex;
     color: var(--headline);
-    font-size: xx-large;
+    align-self: center;
+    font-size: x-large;
     text-decoration: none;
-    font-family: Alice, serif;
+    font-family: CooperBT-Regular, serif;
     font-weight: bold;
+    letter-spacing: 1px;
     white-space: nowrap;
     padding-right: 10px;
 }
 
 .desktop-contact-button-wrapper {
+    display: flex;
+    align-self: center;
     margin-left: auto;
 }
 
 .nav-links{
-    height: 12vh;
+    height: 86px;
     display: flex;
     align-items: center;
 }
@@ -39,7 +46,6 @@ nav {
 }
 
 .nav-ul-li{
-    font-family: IBMPlexMono-MediumItalic, serif;
     list-style-type: none;
     padding: 0 20px;
     display: flex;
@@ -53,6 +59,7 @@ nav {
     font-weight: normal;
     font-size: 16px;
     color: black;
+    width: auto;
 }
 
 .nav-ul-li-a:hover{
@@ -63,8 +70,7 @@ nav {
 .nav-sub-menu {
     position: absolute;
     background-color: var(--background);
-    margin-top: 48px;
-    margin-left: -180px;
+    margin-top: 35px;
     border: 1px solid var(--headline);
     border-radius: 15px;
     display: flex;
@@ -72,6 +78,7 @@ nav {
 }
 
 .nav-sub-menu-group {
+    min-width: 250px;
     padding: 16px;
 }
 
@@ -102,7 +109,7 @@ nav {
 /*mobile navbar css*/
 .hamburger-menu{
     position: absolute;
-    right: 2%;
+    right: 5%;
     cursor: pointer;
 }
 
@@ -114,38 +121,51 @@ nav {
         display: revert;
     }
     .mobile-navbar {
-        display: flex;
+        z-index: 3;
+        display: grid;
         position: fixed;
-        width: 100vw;
-        align-items: center;
-        height: 12vh;
-        background-color: var(--component-background);
+        width: 100%;
+        height: 86px;
+        background-color: var(--primary);
         border: 1px solid var(--headline);
-        padding: 0 20px;
+    }
+    .navbar-logo-svg {
+        position: fixed;
+        width: 240px;
+        height: 40px;
+        left: calc(100vw/2 - 120px);
+        z-index: 10;
+    }
+    .navbar-logo-text {
+        font: 30px CooperBT-Regular, Arial;
+        fill: white;
+        stroke: black;
+        stroke-width: 1px;
+        stroke-linejoin: round;
     }
     .nav-links {
-        background-color: var(--component-background);
-        border-top: 1px solid var(--headline);
-        border-bottom: 1px solid var(--headline);
+        height: unset;
+        border-top: unset;
+        border-bottom: unset;
     }
     .nav-ul {
         display: flex;
         flex-direction: column;
-        justify-content: start;
         position: fixed;
-        top: 12vh;
+        top: 86px;
         right: 0;
         left: 0;
-        height: 88vh;
-        overflow-y: scroll;
-        background: var(--component-background);
+        height: 100vh;
+        overflow-y: auto;
+        background: var(--primary);
         border: 1px solid var(--headline);
         border-top: unset;
+        padding-right: unset;
         z-index: 2;
     }
     .nav-ul-li {
         width: 100%;
-        border-bottom: 1px solid var(--primary);
+        border-bottom: 1px solid var(--darker);
     }
     .nav-ul-li-a {
         font-size: 20px;
@@ -163,7 +183,7 @@ nav {
         margin: unset;
         border: unset;
         border-radius: unset;
-        border-bottom: 1px solid var(--primary);
+        border-bottom: 1px solid var(--darker);
         align-self: unset;
         align-items: unset;
     }
@@ -181,7 +201,6 @@ nav {
     }
     .nav-sub-menu-item {
         list-style-type: none;
-        font-family: IBMPlexMono-MediumItalic, serif;
         max-width: unset;
         padding: 0 20px;
     }

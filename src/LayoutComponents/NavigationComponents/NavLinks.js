@@ -14,65 +14,40 @@ const NavLinks = ({isClicked, closeMenu}) => {
     return(
         <>
             <Link to="/" className="desktop-vis navbar-logo" onClick={closeDropDownState}>
-                jezarah ebel.
+                <span className="page-section-header-standout">&#60;</span>jezarah ebel<span className="page-section-header-standout">/&#62;</span>
             </Link>
             <div className="nav-links">
                 <ul className="nav-ul">
                     <li className="mobile-vis nav-ul-li" onClick={() => isClicked && closeMenu()}>
                         <Link className="nav-ul-li-a" to="/" onClick={closeDropDownState}>Home</Link>
                     </li>
-                    <li className="nav-ul-li pointer" onClick={() => changeDropDownState()}>
-                        <text className="nav-ul-li-a">
-                            Explore
+                    <li className="mobile-vis nav-ul-li" onClick={() => isClicked && closeMenu()}>
+                        <Link className="nav-ul-li-a" to="/projects" onClick={closeDropDownState}>
+                            Projects
+                        </Link>
+                    </li>
+                    <li className="desktop-vis nav-ul-li" onClick={() => isClicked && closeMenu()}>
+                        <Link className="nav-ul-li-a" to="/projects" onClick={closeDropDownState}>
+                            Projects
+                        </Link>
+                    </li>
+                    <div className="nav-ul-li pointer" onClick={() => changeDropDownState()}>
+                        <div className="nav-ul-li-a">
+                            BlogPosts
                             {!dropDownIsOpen && <MdOutlineKeyboardArrowDown/>}
                             {dropDownIsOpen && <MdOutlineKeyboardArrowUp/>}
-                        </text>
-                    </li>
+                        </div>
+                    </div>
                     {dropDownIsOpen &&
                         <div className="nav-sub-menu">
                             <div className="nav-sub-menu-group">
-                                <div className="nav-sub-menu-header">My Projects</div>
+                                <div className="nav-sub-menu-header">Blog Posts</div>
                                 <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>
-                                    <Link className="nav-ul-li-a" to="/projects/sections-insight-term-project" onClick={closeDropDownState}>Section Insights, Term Project</Link>
-                                </li>
-                                <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>
-                                    <Link className="nav-ul-li-a" to="projects/david-rays-damproofing-website" onClick={closeDropDownState}>David Ray's Dampproofing Website, Freelance Project</Link>
-                                </li>
-                                <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>
-                                    <Link className="nav-ul-li-a" to="projects/bcwhales-incident-reporter-app" onClick={closeDropDownState}>BCWhales Remote Report App, Co-op Project</Link>
-                                </li>
-                                <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>
-                                    <Link className="nav-ul-li-a" to="projects/fearless-cmdf-hackathon-project" onClick={closeDropDownState}>Fearless, cmd-f Hackathon Project</Link>
+                                    <Link className="nav-ul-li-a" to="/blog-posts/fullstack-template-project-tutorial-p1-database" onClick={closeDropDownState}>
+                                        Full Stack Template Project Part 1: Project Set Up & Database
+                                    </Link>
                                 </li>
                             </div>
-                            {/** TODO: BLOG POSTS**/}
-                            {/*<div className="nav-sub-menu-group">*/}
-                            {/*    <div className="nav-sub-menu-header">Blog Posts</div>*/}
-                            {/*    <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>*/}
-                            {/*        <Link className="nav-ul-li-a" to="/" onClick={closeDropDownState}>Responsive Navigation in React</Link>*/}
-                            {/*    </li>*/}
-                            {/*    <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>*/}
-                            {/*        <Link className="nav-ul-li-a" to="/" onClick={closeDropDownState}>Create a Contact Form using Mailgun</Link>*/}
-                            {/*    </li>*/}
-                            {/*    <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>*/}
-                            {/*        <Link className="nav-ul-li-a" to="/" onClick={closeDropDownState}>Improve SEO using Metadata</Link>*/}
-                            {/*    </li>*/}
-                            {/*    <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>*/}
-                            {/*        <Link className="nav-ul-li-a" to="/" onClick={closeDropDownState}>*/}
-                            {/*            Create a Simple Fullstack Template Part 1. Database*/}
-                            {/*        </Link>*/}
-                            {/*    </li>*/}
-                            {/*    <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>*/}
-                            {/*        <Link className="nav-ul-li-a" to="/" onClick={closeDropDownState}>*/}
-                            {/*            Create a Simple Fullstack Template Part 2. API*/}
-                            {/*        </Link>*/}
-                            {/*    </li>*/}
-                            {/*    <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>*/}
-                            {/*        <Link className="nav-ul-li-a" to="/" onClick={closeDropDownState}>*/}
-                            {/*            Create a Simple Fullstack Template Part 3. Frontend*/}
-                            {/*        </Link>*/}
-                            {/*    </li>*/}
-                            {/*</div>*/}
                         </div>
                     }
                     <li className="mobile-vis nav-ul-li" onClick={() => isClicked && closeMenu()}>
