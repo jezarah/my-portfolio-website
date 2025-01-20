@@ -1,0 +1,21 @@
+pre.language-python,
+pre.language-text {
+    background-color: var(--code-block-bg);
+    margin: 0;
+}
+
+pre.language-python code {
+    font-size: 14px;
+    font-family: Menlo, Monaco, Consolas, monospace;
+}
+
+pre.language-python span.token.operator {
+    background-color: var(--code-block-bg);
+}
+
+pre.language-text code {
+    font-size: 14px;
+    font-family: Menlo, Monaco, Consolas, monospace;
+}
+
+

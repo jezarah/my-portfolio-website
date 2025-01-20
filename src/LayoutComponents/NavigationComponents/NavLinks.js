@@ -47,6 +47,11 @@ const NavLinks = ({isClicked, closeMenu}) => {
                                         Full Stack Template Project Part 1: Project Set Up & Database
                                     </Link>
                                 </li>
+                                <li className="nav-sub-menu-item" onClick={() => isClicked && closeMenu()}>
+                                    <Link className="nav-ul-li-a" to="/blog-posts/fullstack-template-project-tutorial-p2-api" onClick={closeDropDownState}>
+                                        Full Stack Template Project Part 2: API Endpoints & User Authentication
+                                    </Link>
+                                </li>
                             </div>
                         </div>
                     }

@@ -68,7 +68,7 @@ const Contact  = () => {
     };
 
     return (
-        <div className="page">
+        <div className="page page-y-padding">
             <div className="form-wrapper" style={{gridTemplateColumns: "repeat(1, 1fr)"}}>
                 <form onSubmitCapture={handleSubmit(onSubmit)}>
                     <div className="page-section-header contact-header">

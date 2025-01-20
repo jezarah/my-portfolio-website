@@ -2,18 +2,19 @@
 nav {
     display: flex;
     align-items: center;
-    background: var(--background);
     padding: 20px 50px;
+
+    background: var(--background);
 }
 
 /*desktop nav bar css*/
 .desktop-navbar {
+    display: grid;
     position: fixed;
-    z-index: 3;
     width: 100%;
     padding: 0 6vw;
     border: 1px solid var(--headline);
-    display: grid;
+    z-index: 3;
 }
 
 .navbar-logo {
@@ -22,8 +23,7 @@ nav {
     align-self: center;
     font-size: x-large;
     text-decoration: none;
-    font-family: CooperBT-Regular, serif;
-    font-weight: bold;
+    font-family: CooperBT-Bold, serif;
     letter-spacing: 1px;
     white-space: nowrap;
     padding-right: 10px;
@@ -137,7 +137,7 @@ nav {
         z-index: 10;
     }
     .navbar-logo-text {
-        font: 30px CooperBT-Regular, Arial;
+        font: 30px CooperBT-Bold, Arial;
         fill: white;
         stroke: black;
         stroke-width: 1px;
@@ -165,7 +165,7 @@ nav {
     }
     .nav-ul-li {
         width: 100%;
-        border-bottom: 1px solid var(--darker);
+        border-bottom: 1px solid var(--alt-text);
     }
     .nav-ul-li-a {
         font-size: 20px;
@@ -183,7 +183,7 @@ nav {
         margin: unset;
         border: unset;
         border-radius: unset;
-        border-bottom: 1px solid var(--darker);
+        border-bottom: 1px solid var(--alt-text);
         align-self: unset;
         align-items: unset;
     }

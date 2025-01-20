@@ -1,0 +1,135 @@
+/* PROJECTS PAGE */
+.projects-page-no-x-padding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background);
+    border-left: 1px solid var(--headline);
+    border-right: 1px solid var(--headline);
+}
+
+.projects-page-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+}
+
+.projects-page-header {
+    display: flex;
+    align-self: center;
+    margin: 2rem 0;
+
+    font-family: CooperBT-Regular, sans-serif;
+    font-size: xx-large;
+}
+
+/*Project Pages Images*/
+.project-img-wrapper {
+    align-self: center;
+    justify-self: start;
+}
+
+.project-img-odd {
+    width: min(65vw, 866px);
+    height: auto;
+
+    border: 1px solid var(--headline);
+    border-radius: 15px;
+    box-shadow: 4px 4px;
+}
+
+.project-img-even {
+    width: min(65vw, 866px);
+    height: auto;
+    margin-right: 4px; /*to accommodate box shadow*/
+
+    border: 1px solid var(--headline);
+    border-radius: 15px;
+    box-shadow: 4px 4px;
+}
+
+.transparent-project-img {
+    border: none;
+    border-radius: unset;
+    box-shadow: none;
+
+    filter: drop-shadow(4px 4px var(--headline));
+}
+
+.winner-badge {
+    visibility: visible;
+    align-content: center;
+    width: 65px;
+    height: 30px;
+
+    background: var(--secondary);
+    border-radius: 10px;
+
+    text-align: center;
+    font-family: monospace;
+}
+
+/*All Projects Page Sections*/
+.project-section {
+    display: inline-flex;
+    align-self: flex-end;
+    margin: 4rem 0;
+}
+
+.project-details {
+    align-self: center;
+    padding: 0 2rem;
+}
+
+.project-details-header {
+    font-family: CooperBT-Regular, sans-serif;
+    font-size: large;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+}
+
+.project-link-wrapper {
+    padding-top: .5rem;
+}
+
+.project-link {
+    margin-right: 6px;
+    color: var(--primary);
+}
+
+/* Mobile PROJECTS PAGE STYLING */
+@media (max-width: 768px) {
+    .project-section {
+        margin: 1.5rem 0;
+    }
+
+    .project-img-odd {
+        width: 55vw;
+    }
+
+    .project-img-even {
+        width: 55vw;
+    }
+
+    .project-details {
+        padding: 1rem;
+    }
+
+    .project-details-header {
+        font-size: 14px;
+    }
+
+    .project-details-body {
+        font-size: smaller;
+    }
+
+    .project-link-wrapper {
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
+    .project-link {
+        font-size: small;
+    }
+}

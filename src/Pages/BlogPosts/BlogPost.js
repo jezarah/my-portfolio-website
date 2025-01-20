@@ -1,38 +1,29 @@
-import React, {useState} from "react";
-import RichTextBlog from "./BlogPostBody";
+import React from "react";
+import RichTextBlog from "./BlogPostComponents/BlogPostBody";
 import {Link} from "react-router-dom";
 import { MdChevronRight } from "react-icons/md";
 import {TbBrandGithub} from "react-icons/tb";
+import './blog-posts.css';
 const BlogPost = ({blogPost}) => {
-    const [fetched, setFetched] = useState(false);
-    const [date, setDate] = useState(new Date("2000-01-01"));
-
-    if (!fetched && blogPost !== undefined) {
-        setDate(new Date(blogPost.publishedOn));
-        setFetched(true);
-    }
-
     return (
         <>
-            {fetched &&
-                <div className="page">
+            {blogPost &&
+                <div className="page page-y-padding">
                 <div className="content">
-                    <div className="blogpost-page">
+                    <div className="blog-post-page">
                         <div>
                             <div className="breadcrumbs">
                             <span>
-                                <Link to="/blog-posts" className="breadcrumbs-link">
-                                    blog-posts
-                                </Link>
-                                <MdChevronRight size="14px" style={{paddingTop: "2px"}}/>
+                                <Link to="/blog-posts" className="breadcrumbs-link">blog-posts</Link>
+                                <MdChevronRight size="14px" style={{paddingTop: "4px"}}/>
                             </span>
-                                <span className="breadcrumbs-link">{blogPost.path}</span>
+                                <span className="breadcrumbs-link" style={{paddingLeft: "4px"}}>{blogPost.path}</span>
                             </div>
-                            <img className="blogpost-hero blog-img-full-width blog-img-no-border" src={blogPost.hero.fields.file.url} alt={blogPost.hero.fields.title}/>
-                            <h1 className="page-header blogpost-header">{blogPost.title}</h1>
+                            <img className="blog-img-full-width blog-img-no-border" src={blogPost.hero.fields.file.url} alt={blogPost.hero.fields.title}/>
+                            <h1 className="page-header blog-post-header">{blogPost.title}</h1>
                             <div>
                                 <dd style={{padding: "1rem 0", fontSize: '14px', display: "flex", justifyContent: "space-between"}}>
-                                    <p>Published On: {date.toDateString()}</p>
+                                    <p>Published On: {new Date(blogPost.publishedOn).toDateString()}</p>
                                     {blogPost.github &&
                                         <div className="project-link">
                                             <TbBrandGithub style={{margin: "0 2px -3px 0"}}/>
@@ -62,7 +53,7 @@ const BlogPost = ({blogPost}) => {
                             </div>
                         </div>
                         <dd style={{padding: "0 0 2rem 0", fontSize: '14px'}}>
-                            Published On: {date.toDateString()}
+                            Published On: {new Date(blogPost.publishedOn).toDateString()}
                         </dd>
                     </div>
                 </div>

@@ -9,11 +9,11 @@ const About  = ({skills}) => {
                 <div className="page-hero-section">
                     <div>
                         <div className="page-hero-header">
-                            Hello 👋, I'm <span className="page-section-header-standout">Jezzie</span>. <br/>
+                            Hello, I'm <span className="page-section-header-standout">Jezzie</span>. <br/>
                             I'm a Software Developer based in
                             Vancouver, BC!
                         </div>
-                        <div className="page-body">
+                        <div className="page-body page-hero-body">
                             Dedicated to creating functional, responsive, and aesthetic full stack web and mobile applications.
                             My aptitude for analytical problem solving is what pushed me to pursue my first degree in Engineering,
                             but I found my passion for coding and software development due to the unique combination of creativity,
